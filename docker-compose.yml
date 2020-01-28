@@ -1,0 +1,30 @@
+version: "3"
+services:
+  autocomplete-api:
+    build:
+      context: autocomplete-api
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - autocomplete-mysql
+    depends_on:
+      - mysqldb
+ 
+  mysqldb:
+    image: mysql:8
+    networks:
+      - autocomplete-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=db_event
+      
+  shoppingtimeline-api:
+    build:
+      context: shoppingTimeline-api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+      
+networks:
+  autocomplete-mysql:
