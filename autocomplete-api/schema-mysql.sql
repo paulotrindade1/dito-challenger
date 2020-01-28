@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS event (
+  event VARCHAR(100) NOT NULL,
+  timestamp VARCHAR(100) NOT NULL
+);

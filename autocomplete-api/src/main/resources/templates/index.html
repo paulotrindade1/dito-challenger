@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autocomplete API</title>
+
+  <script type="text/javascript" th:src="@{/js/jquery-3.2.0.min.js}"></script>
+  <script type="text/javascript" th:src="@{/js/jquery.autocomplete.js}"></script>
+  <script type="text/javascript" th:src="@{/js/materialize.min.js}"></script>
+
+  <link type="text/css" rel="stylesheet" th:href="@{/css/materialize.min.css}" media="screen,projection"/>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script>
+    $(document).ready(function() {
+      $('#autocomplete-event').devbridgeAutocomplete({
+          serviceUrl: '/autocompleteAPI/suggestion',
+          paramName: 'keyword',
+          minChars: 2,
+          autoSelectFirst: true,
+      });
+    });
+  </script>
+</head>
+<body>
+  Autocomplete API!
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s3">
+            <input type="text" id="autocomplete-event" class="autocomplete">
+            <label for="autocomplete-event">Autocomplete search</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
