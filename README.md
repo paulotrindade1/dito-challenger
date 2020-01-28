@@ -9,14 +9,14 @@
  
 # autocomplete API
 ## Website example
-Autocomplete website: http://localhost:3000/
+Autocomplete website: http://localhost:8080/
 
 ## Rest API - endpoints
-  GET method to suggestions: http://localhost:3000/autocompleteAPI/suggestion
+  GET method to suggestions: http://localhost:8080/autocompleteAPI/suggestion
   
     Example: http://localhost:8080/autocompleteAPI/suggestion?keyword=sh
     
-  POST method to add an event: http://localhost:3000/autocompleteAPI/addEvent
+  POST method to add an event: http://localhost:8080/autocompleteAPI/addEvent
   
     JSON example:
     { 
