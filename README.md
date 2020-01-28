@@ -1,5 +1,6 @@
 # Dito challenger
-'autcomplete' and 'shopping timeline' API's for dito challenger
+'Autocomplete' and 'Shopping Timeline' API's for dito challenger
+
 
 # shoppingTimeline API
 ## Rest API - endpoint
